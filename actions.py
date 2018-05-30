@@ -11,6 +11,7 @@ class ActionSwitchOff(Action):
     def run(self, dispatcher, tracker, domain):
         light = tracker.get_slot('light')
         dispatcher.utter_message("Switching off {}".format(light))
+        dispatcher.utter_message("Switched off {}".format(light))
         return []
 
 class ActionSwitchOn(Action):
@@ -20,7 +21,7 @@ class ActionSwitchOn(Action):
     def run(self, dispatcher, tracker, domain):
         light = tracker.get_slot('light')
         dispatcher.utter_message("Switching on {}".format(light))
-        print(light)
+        dispatcher.utter_message("Switched on {}".format(light))
         return []
 
 
