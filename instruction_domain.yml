@@ -1,0 +1,39 @@
+slots:
+    light:
+        type: text
+    fan:
+        type: text
+    state:
+        type: bool
+
+entities:
+    - light
+    - fan
+
+intents:
+    - greet
+    - goodbye
+    - switch_off
+    - switch_on
+
+templates:
+    utter_greet:
+        - 'Hello! How can I help?'
+    utter_goodbye:
+        - 'Talk to you later.'
+        - 'Sayonara...'
+        - 'Bye...'
+    utter_ask_device_off:
+        - 'What do you want to switch off?'
+        - 'Which device do you want to switch off?'
+    utter_ask_device_on:
+        - 'What do you want to switch on?'
+        - 'Which device do you want to switch on?'
+
+actions:
+    - utter_greet
+    - utter_goodbye
+    - utter_ask_device_off
+    - utter_ask_device_on
+    - actions.ActionSwitchOff
+    - actions.ActionSwitchOn
